@@ -56,7 +56,6 @@ class PriceCalculationUnit
     public function applyPromotion(): float
     {
         return $this->getPromotionalPrice();
-
     }
 
     public function getPromotionalPrice(float $price = 0): float

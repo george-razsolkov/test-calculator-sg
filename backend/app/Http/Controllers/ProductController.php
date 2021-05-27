@@ -22,6 +22,8 @@ class ProductController extends Controller
         $collection = $helper->generatePriceCalculationUnitCollection($request->validated()['products']);
 
         $details = $priceCalculationService->calculatePrice($collection);
+
+        //should be wrapped in transaction
         $saleRecord = $saleRecordRepository->create(['total_price' => $details['total_price']]);
 
         foreach ($details['products'] as $productDetail) {
