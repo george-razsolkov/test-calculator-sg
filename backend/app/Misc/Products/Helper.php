@@ -10,6 +10,7 @@ class Helper
 {
     public function generatePriceCalculationUnitCollection(array $data): Collection
     {
+        //eager load special promotions
         $products = Product::whereIn('name', $data)->with('specialPromotion')->get();
 
         $map = [];

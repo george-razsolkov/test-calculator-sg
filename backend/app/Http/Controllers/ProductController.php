@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\BuyProductsRequest;
 use App\Misc\Products\Helper;
-use App\Misc\Products\PriceCalculationUnit;
-use App\Models\Product;
 use App\Repositories\SaleRecord\SaleRecordRepositoryInterface;
 use App\Repositories\SaleRecordProduct\SaleRecordProductRepositoryInterface;
 use App\Services\Products\PriceCalculation\PriceCalculationInterface;
